@@ -4,5 +4,5 @@ FROM haproxy:latest
 COPY haproxy.cfg /usr/local/etc/haproxy/haproxy.cfg
 
 # Copiar o arquivo HTML para a pasta de erros do HAProxy
-COPY site/index.html /usr/local/etc/haproxy/errors/index.html
+COPY html/index.html /usr/local/etc/haproxy/errors/index.html
 
