@@ -1,16 +1,7 @@
-version: '3.8'
+version: '3.9'
 
 services:
-  web:
+  haproxy:
     build: .
     ports:
-      - "8080:80"
-
-  haproxy:
-    image: haproxy:alpine
-    ports:
-      - "80:80"
-    volumes:
-      - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
-    depends_on:
-      - web
+      - 8080:80
